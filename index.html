@@ -1,0 +1,71 @@
+<!DOCTYPE <!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Trivia Game</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="style.css" media="screen" href="main.css" />
+
+</head>
+
+<body>
+
+    <script>
+        integrity = "sha256-hVVnYaiADRTO2PzUGmuLJr88LUSjGIZsDYGmIJv2b8="
+        crossorigin = "anonymous"
+    </script>
+
+</body>
+
+<div class="container">
+    <div class="jumbotron text-center">
+        <h1>Trivia Game</h1>
+
+        <div class="btnContainer">
+            <button type="button" class="btn btn-default btn-lg btn-primary startBtn">START</button>
+        </div>
+    </div>
+
+    <script type="text/javascript">
+        /*Global Variables*/
+
+        var time = 20;
+        var question = {
+            q1: {
+                'What does HTML stand for?':
+                    { 'a': 'b', 'c': 'd','e':'f','g':'h', },
+            }
+        };
+        var correctAnswers;
+        var wrongAnswers;
+        var intervalid;
+
+        /*function*/
+
+        console.log(question.q1['What does HTML stand for?'].a);
+        function startGame() {
+
+        }
+        function gamePlay() {
+            $('.startBtn').on('click', function () {
+                //removes all buttons with the class startBtn
+                $('button').remove('.startBtn');
+                quest1();
+            });
+        }
+        function quest1() {
+            //Testing / Creates new Div and places it inside of btnContainer
+            var newDiv = $('<div class=" quest q1');
+            newDiv.html('testing');
+
+            $('.btnContainer').append(newDiv);
+            intervalid = setInterval(timecount, 1000);
+        }
+        function timeCount() {
+
+        }
+    </script>
+
+</html>
