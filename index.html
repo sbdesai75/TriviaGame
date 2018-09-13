@@ -7,10 +7,20 @@
     <title>Trivia Game</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" type="style.css" media="screen" href="main.css" />
+    <script src="assets/javascript/app.js"></script>
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+        crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49"
+        crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy"
+        crossorigin="anonymous"></script>
 
 </head>
 
 <body>
+
+
+
 
     <script>
         integrity = "sha256-hVVnYaiADRTO2PzUGmuLJr88LUSjGIZsDYGmIJv2b8="
@@ -27,45 +37,80 @@
             <button type="button" class="btn btn-default btn-lg btn-primary startBtn">START</button>
         </div>
     </div>
+    <h2>Time Remaining: </h2>
 
-    <script type="text/javascript">
+    <h2 id="capital">What is the capital of California?</h2>
+
+    <div class="form-check">
+        <input class="form-check-input" type="checkbox" value="" id="albany">
+        <label class="form-check-label" for="defaultCheck1">a. Albany
+            <div class="form-check">
+                <input class="form-check-input" type="checkbox" value="" id="fresno">
+                <label class="form-check-label" for="defaultCheck1">b. Fresno
+                    <div class="form-check">
+                        <input class="form-check-input" type="checkbox" value="" id="sacramento">
+                        <label class="form-check-label" for="defaultCheck1"> c. Sacramento
+                            <div class="form-check">
+                                <input class="form-check-input" type="checkbox" value="" id="salem">
+                                <label class="form-check-label" for="defaultCheck1">d. Salem
+
+
+                                    <h2 id="baseball">Which baseball team has won the most World Series titles?</h2>
+                                    <div class="form-check">
+                                        <input class="form-check-input" type="checkbox" value="" id="giants">
+                                        <label class="form-check-label" for="defaultCheck1">a. The San Francisco Giants
+                                            <div class="form-check">
+                                                <input class="form-check-input" type="checkbox" value="" id="yankees">
+                                                <label class="form-check-label" for="defaultCheck1">b. The New York Yankees
+                                                    <div class="form-check">
+                                                        <input class="form-check-input" type="checkbox" value="" id="redSox">
+                                                        <label class="form-check-label" for="defaultCheck1">c. The Boston Red Sox
+                                                            <div class="form-check">
+                                                                <input class="form-check-input" type="checkbox" value="" id="athletics">
+                                                                <label class="form-check-label" for="defaultCheck1">d. The Oakland Athletics
+
+
+
+                                                                    <h2 id="beatles">What city do the Beatles come from?</h2>
+                                                                    <div class="form-check">
+                                                                        <input class="form-check-input" type="checkbox" value="" id="london">
+                                                                        <label class="form-check-label" for="defaultCheck1">a. London
+                                                                            <div class="form-check">
+                                                                                <input class="form-check-input" type="checkbox" value="" id="birmingham">
+                                                                                <label class="form-check-label" for="defaultCheck1">b. Bimingham
+                                                                                    <div class="form-check">
+                                                                                        <input class="form-check-input" type="checkbox" value="" id="manchester">
+                                                                                        <label class="form-check-label" for="defaultCheck1">c. Manchester
+                                                                                            <div class="form-check">
+                                                                                                <input class="form-check-input" type="checkbox" value="" id="liverpool">
+                                                                                                <label class="form-check-label" for="defaultCheck1">d. Liverpool
+
+                                                                                                    <h2 id="TVshow">What TV show features
+                                                                                                        the character George
+                                                                                                        Costanza?
+                                                                                                    </h2>
+                                                                                                    <div class="form-check">
+                                                                                                        <input class="form-check-input" type="checkbox" value="" id="seinfeld">
+                                                                                                        <label class="form-check-label" for="defaultCheck1">a. Seinfeld
+                                                                                                            <div class="form-check">
+                                                                                                                <input class="form-check-input" type="checkbox" value="" id="friends">
+                                                                                                                <label class="form-check-label" for="defaultCheck1">b. Friends
+                                                                                                                    <div class="form-check">
+                                                                                                                        <input class="form-check-input" type="checkbox" value="" id="survivor">
+                                                                                                                        <label class="form-check-label" for="defaultCheck1">c.
+                                                                                                                            Survivor
+                                                                                                                            <div class="form-check">
+                                                                                                                                <input class="form-check-input" type="checkbox" value="" id="breakingBad">
+                                                                                                                                <label class="form-check-label" for="defaultCheck1">d.
+                                                                                                                                    Breaking
+                                                                                                                                    Bad
+
+
+
+                                                                                                                                    <script type="text/javascript">
         /*Global Variables*/
 
-        var time = 20;
-        var question = {
-            q1: {
-                'What does HTML stand for?':
-                    { 'a': 'b', 'c': 'd','e':'f','g':'h', },
-            }
-        };
-        var correctAnswers;
-        var wrongAnswers;
-        var intervalid;
 
-        /*function*/
-
-        console.log(question.q1['What does HTML stand for?'].a);
-        function startGame() {
-
-        }
-        function gamePlay() {
-            $('.startBtn').on('click', function () {
-                //removes all buttons with the class startBtn
-                $('button').remove('.startBtn');
-                quest1();
-            });
-        }
-        function quest1() {
-            //Testing / Creates new Div and places it inside of btnContainer
-            var newDiv = $('<div class=" quest q1');
-            newDiv.html('testing');
-
-            $('.btnContainer').append(newDiv);
-            intervalid = setInterval(timecount, 1000);
-        }
-        function timeCount() {
-
-        }
-    </script>
+                                                                                                                                    </script>
 
 </html>
